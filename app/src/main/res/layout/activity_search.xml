@@ -6,22 +6,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+
+    android:background="@drawable/bg_for_plain"
     tools:context=".Search">
 
-    <Button
-        android:id="@+id/btnSearch"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Search a Ride"
-        android:padding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="#373C39"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ListView
-        android:layout_width="350dp"
-        android:layout_height="500dp"/>
+        <ImageButton
+            android:id="@+id/switchTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:background="#058C1F"
+            android:src="@drawable/arrow_back"></ImageButton>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Search a Ride"
+            android:padding="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:backgroundTint="#0A2916">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="540dp"
+        android:gravity="center"
+        android:layout_marginLeft="11dp"
+        android:background="@drawable/etlogin"
+        android:layout_marginTop="80dp">
+
+        <ListView
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+
+            />
+
+    </LinearLayout>
+
+
+
 
 
 
 </LinearLayout>
+
+
+

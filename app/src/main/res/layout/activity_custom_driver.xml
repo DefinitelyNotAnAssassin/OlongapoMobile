@@ -9,233 +9,228 @@
     android:padding="15dp"
     tools:context=".CustomDriver">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/arrow_back"
-        android:layout_marginBottom="80dp"
-        android:background="@color/white">
-    </ImageButton>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/black"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:text="Rides as Driver" />
-    </LinearLayout>
-
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#A6A5A5"
-        >
+        android:background="@drawable/etlogin">
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="5dp"
-            android:paddingLeft="5dp"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:text="ID"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5dp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:text="OWNER"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:background="#D7D8D7"
-                android:layout_marginBottom="5dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:text="DESTINATION"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:text="REQUIRED ARRIVAL TIME"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:background="#D7D8D7"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:text="DRIVER"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:text="STATUS"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:background="#D7D8D7"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity="center|left"
-                android:text="ACTION"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"/>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="5dp"
-            android:paddingRight="5dp"
+            android:orientation="horizontal"
+
             >
 
-            <TextView
-                android:id="@+id/tvId"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5dp"
-                />
 
-            <TextView
-                android:id="@+id/tvOwner"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:background="#D7D8D7"
-                android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                >
 
-            <TextView
-                android:id="@+id/tvDestination"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:text="ID"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/et_white_left"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    />
 
-            <TextView
-                android:id="@+id/tvArrival"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:background="#D7D8D7"
-                android:layout_marginBottom="5dp"
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:text="OWNER"
+                    android:textSize="15sp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/et"
+                    android:layout_marginBottom="5dp"
+                    />
 
-            <TextView
-                android:id="@+id/tvDriver"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="5dp"
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/et_white_left"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|left"
+                    android:text="DESTINATION"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvStatus"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center|left"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:background="#D7D8D7"
-                android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/et"
+                    android:gravity="center|left"
+                    android:text="REQUIRED ARRIVAL TIME"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:text="DRIVER"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/et_white_left"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:text="STATUS"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/et"
+                    android:paddingLeft="5dp"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center|left"
+                    android:text="ACTION"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/et_white_left"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity=""
-                android:orientation="horizontal"
-                android:background="@color/white">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                >
 
-                <Button
-                    android:id="@+id/btnViewDriver"
-                    android:layout_width="90dp"
-                    android:layout_height="48dp"
-                    android:text="View"
-                    android:textSize="17dp"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="#373C39"/>
+                <TextView
+                    android:id="@+id/tvId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/et_white_right"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    />
 
-                <Button
-                    android:id="@+id/btnCompleteDriver"
-                    android:layout_width="110dp"
+                <TextView
+                    android:id="@+id/tvOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/et_right"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/et_white_right"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvArrival"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/et_right"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDriver"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/et_white_right"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/et_right"
+                    android:gravity="center|left"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:text="Complete"
-                    android:textSize="14dp"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="#373C39"/>
+                    android:gravity=""
+                    android:orientation="horizontal"
+                    android:background="@drawable/et_white_right">
+
+                    <Button
+                        android:id="@+id/btnViewDriver"
+                        android:layout_width="90dp"
+                        android:layout_height="48dp"
+                        android:text="View"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#373C39"/>
+
+                    <Button
+                        android:id="@+id/btnCompleteDriver"
+                        android:layout_width="110dp"
+                        android:layout_height="48dp"
+                        android:text="Complete"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#373C39"/>
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
 
 
+
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
-
-
-    </LinearLayout>
 
 
 

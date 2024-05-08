@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_for_all"
+    android:gravity=""
     tools:context=".Information">
 
     <ImageButton
@@ -16,17 +17,18 @@
         android:src="@drawable/arrow_back"
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
-        android:background="@color/black">
+        android:background="#058C1F">
     </ImageButton>
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="#A6A5A5"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/etlogin"
         android:orientation="horizontal"
-        android:padding="25dp">
+        android:padding="15dp"
+        android:layout_marginStart="25dp">
 
         <LinearLayout
             android:layout_width="150dp"
@@ -39,77 +41,84 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_left"
                 android:gravity="center|left"
                 android:text="ID"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="#D7D8D7"
+                android:background="@drawable/et"
                 android:gravity="center|left"
                 android:text="OWNER"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_left"
                 android:gravity="center|left"
                 android:text="DESTINATION"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="#D7D8D7"
+                android:background="@drawable/et"
                 android:gravity="center|left"
                 android:text="REQUIRED ARRIVAL TIME"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_left"
                 android:gravity="center|left"
                 android:text="PASSENGERS WITH OWNER"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="#D7D8D7"
+                android:background="@drawable/et"
                 android:gravity="center|left"
                 android:text="TOTAL PASSENGER"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_left"
                 android:gravity="center|left"
                 android:text="STATUS"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:paddingLeft="5dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -125,7 +134,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_right"
                 android:gravity="center|left"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -136,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="#D7D8D7"
+                android:background="@drawable/et_right"
                 android:gravity="center|left"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -147,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_right"
                 android:gravity="center|left"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -158,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="#D7D8D7"
+                android:background="@drawable/et_right"
                 android:gravity="center|left"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -169,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_right"
                 android:gravity="center|left"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -180,7 +189,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="#D7D8D7"
+                android:background="@drawable/et_right"
                 android:gravity="center|left"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -189,7 +198,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:background="@color/white"
+                android:background="@drawable/et_white_right"
                 android:gravity=""
                 android:orientation="horizontal" />
 
@@ -206,7 +215,7 @@
         android:padding="10dp"
         android:layout_marginStart="200dp"
         android:textSize="20dp"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="#194053"/>
 
 
 </LinearLayout>

@@ -5,18 +5,16 @@
     android:thickness="0dp"
     >
     <corners
-        android:radius="40dp"
+
+        android:topRightRadius="15dp"
+        android:bottomRightRadius="15dp"
         ></corners>
 
-    <solid android:color="#A7C494">
+    <solid android:color="#FFA8DDAD">
 
     </solid>
 
-    <stroke
-        android:width="2dp"
-        android:color="#426842">
 
-    </stroke>
 
 
 

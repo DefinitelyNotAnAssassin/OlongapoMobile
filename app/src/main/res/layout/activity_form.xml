@@ -10,27 +10,27 @@
     tools:context=".Form">
 
     <ImageButton
-        android:id="@+id/switchToRequestRide"
+        android:id="@+id/switchTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/arrow_back"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
-        android:background="@color/black">
-    </ImageButton>
+        android:background="#058C1F"
+        android:src="@drawable/arrow_back"></ImageButton>
 
 
 
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="30dp"
-        android:background="#A6A5A5"
-        android:layout_marginTop="100dp">
+        android:padding="20dp"
+        android:layout_marginLeft="11dp"
+        android:background="@drawable/etlogin"
+        android:layout_marginTop="70dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -219,7 +219,7 @@
             android:text="Make a Request"
             android:padding="10dp"
             android:textSize="20dp"
-            android:backgroundTint="@color/black"/>
+            android:backgroundTint="#102E1B"/>
 
     </LinearLayout>
 
