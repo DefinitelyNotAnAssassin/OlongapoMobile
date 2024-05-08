@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,20 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OlongapoGo"
         tools:targetApi="31">
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+
         <activity
             android:name=".RegisterDriver"
             android:exported="false" />
+
         <activity
-            android:name=".ui.login.RegistrationDriver"
-            android:exported="false"
-            android:label="@string/title_activity_registration_driver" />
-        <activity
-            android:name=".DriverRegistration"
+            android:name=".Login"
             android:exported="false" />
+
         <activity
             android:name=".MainPage"
             android:exported="false" />
