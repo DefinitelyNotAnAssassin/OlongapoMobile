@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,22 +24,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Search extends AppCompatActivity {
-
-    ArrayList<Map<String, String>> rides = new ArrayList<Map<String, String>>();
-    String currentUser;
-    ListView driverRides;
+public class RequestActivity extends AppCompatActivity {
+    ListView listViewOwnerRides;
     Button searchBtn;
+    ArrayList<Map<String, String>> rides = new ArrayList<>();
+
+    String currentUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_request);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://olongapogo.pythonanywhere.com/rides/getRides";
@@ -51,17 +54,15 @@ public class Search extends AppCompatActivity {
                     try {
                         JSONObject responseJSON = new JSONObject(response);
                         System.out.println(responseJSON);
-                        System.out.println("^^ From Search");
+                        System.out.println("^^ From RequestActivity");
 
-                        for (int i = 0; i < responseJSON.getJSONArray("driver_rides").length(); i++) {
-                            JSONObject ride = responseJSON.getJSONArray("driver_rides").getJSONObject(i);
+                        for (int i = 0; i < responseJSON.getJSONArray("user_rides").length(); i++) {
+                            JSONObject ride = responseJSON.getJSONArray("user_rides").getJSONObject(i);
                             Map<String, String> rideMap = new HashMap<>();
-                            // [{"id":2,"owner_id":4,"driver_id":1,"destination":"Olongapo","required_arrival_time":"2024-05-07T10:13:00Z","passenger_number_from_owner":4,"passenger_number_in_total":4,"ride_status":"complete","requested_vehicle_type":"Sedan","special_request":"Nothing","can_be_shared":false,"sharer_id_and_passenger_number_pair":null}]}
-                            //2024-05-09 17:46:49.241 13684-13684 AndroidRuntime          com.olongapogo                       D  Shutting down VM
 
                             rideMap.put("id", ride.getString("id"));
-                            rideMap.put("owner_id", ride.getString("owner_id"));
-                            rideMap.put("driver_id", ride.getString("driver_id"));
+                            rideMap.put("owner_id", ride.getString("owner__first_name") + " " + ride.getString("owner__last_name"));
+                            rideMap.put("driver_id", ride.getString("driver__first_name") + " " + ride.getString("driver__last_name"));
                             rideMap.put("destination", ride.getString("destination"));
                             rideMap.put("required_arrival_time", ride.getString("required_arrival_time"));
                             rideMap.put("passenger_number_from_owner", ride.getString("passenger_number_from_owner"));
@@ -73,11 +74,9 @@ public class Search extends AppCompatActivity {
                         }
 
 
-
-
-                        driverRides = findViewById(R.id.listViewDriverRides);
-                        CustomDriverAdapter customDriverAdapter = new CustomDriverAdapter(this, rides);
-                        driverRides.setAdapter(customDriverAdapter);
+                        listViewOwnerRides = findViewById(R.id.listViewOwnerRides);
+                        CustomOwnerAdapter customOwnerAdapter = new CustomOwnerAdapter(this, rides);
+                        listViewOwnerRides.setAdapter(customOwnerAdapter);
 
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
@@ -106,8 +105,15 @@ public class Search extends AppCompatActivity {
         currentUser = intent.getStringExtra("currentUser");
 
 
+        searchBtn = findViewById(R.id.btnRequest);
+
+        searchBtn.setOnClickListener(v -> {
+            Intent intent1 = new Intent(RequestActivity.this, Form.class);
+            intent1.putExtra("currentUser", currentUser);
+            startActivity(intent1);
+        });
 
 
 
-    }
+}
 }

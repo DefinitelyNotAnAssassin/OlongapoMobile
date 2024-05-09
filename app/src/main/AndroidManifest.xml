@@ -47,7 +47,7 @@
             android:name=".Search"
             android:exported="false" />
         <activity
-            android:name=".Request"
+            android:name=".RequestActivity"
             android:exported="false" />
         <activity
             android:name=".Registration"

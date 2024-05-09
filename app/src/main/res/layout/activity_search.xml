@@ -52,7 +52,7 @@
         <ListView
             android:layout_width="350dp"
             android:layout_height="400dp"
-
+            android:id="@+id/listViewDriverRides"
             />
 
     </LinearLayout>
