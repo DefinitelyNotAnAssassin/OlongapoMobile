@@ -56,7 +56,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#252525"
-                android:linksClickable="true"
+                android:clickable="true"
+
                 />
 
         </LinearLayout>
