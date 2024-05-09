@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button signUpBtn;
     TextView signInText;
+    TextView linkSignin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
         });
         signInText = (TextView) findViewById(R.id.linkSignin);
         signInText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+
+        linkSignin = (TextView) findViewById(R.id.linkSignin);
+
+        linkSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Login.class);
