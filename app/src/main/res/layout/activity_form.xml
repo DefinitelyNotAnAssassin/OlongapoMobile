@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_for_all"
+    android:background="@drawable/bg_for_plain"
     tools:context=".Form">
 
     <ImageButton
@@ -30,7 +30,7 @@
         android:padding="20dp"
         android:layout_marginLeft="11dp"
         android:background="@drawable/etlogin"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="150dp">
 
         <TextView
             android:layout_width="match_parent"
