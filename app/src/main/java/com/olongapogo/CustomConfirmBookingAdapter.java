@@ -79,9 +79,7 @@ public class CustomConfirmBookingAdapter extends BaseAdapter {
         tvRequestAccept.setText(currentRide.get("special_request"));
 
 
-        if (currentRide.get("ride_status").equals("complete")){
-            btnAcceptBooking.setVisibility(View.GONE);
-        }
+
         btnAcceptBooking.setOnClickListener(v -> {
             RequestQueue requestQueue = Volley.newRequestQueue(context);
             String url = "http://olongapogo.pythonanywhere.com/rides/acceptRide";

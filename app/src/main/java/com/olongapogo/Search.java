@@ -76,7 +76,7 @@ public class Search extends AppCompatActivity {
 
 
                         driverRides = findViewById(R.id.listViewDriverRides);
-                        CustomDriverAdapter customDriverAdapter = new CustomDriverAdapter(this, rides);
+                        CustomDriverAdapter customDriverAdapter = new CustomDriverAdapter(this, rides, currentUser);
                         driverRides.setAdapter(customDriverAdapter);
 
                     } catch (JSONException e) {
