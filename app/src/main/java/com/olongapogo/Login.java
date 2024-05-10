@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://olongapogo.pythonanywhere.com/accounts/login";
+                String url = "https://olongapogo.pythonanywhere.com/accounts/login";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         response -> {

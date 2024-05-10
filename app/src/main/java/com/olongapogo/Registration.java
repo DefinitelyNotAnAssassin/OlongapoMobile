@@ -49,7 +49,7 @@ public class Registration extends AppCompatActivity {
         etUsernameRegister = findViewById(R.id.etUsernameRegister);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String url = "http://olongapogo.pythonanywhere.com/accounts/register";
+        String url = "https://olongapogo.pythonanywhere.com/accounts/register";
 
         btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(v -> {

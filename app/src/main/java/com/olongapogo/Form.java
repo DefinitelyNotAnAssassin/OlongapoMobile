@@ -46,7 +46,7 @@ public class Form extends AppCompatActivity {
         btnMakeReqForm = findViewById(R.id.btnMakeReqForm);
         Intent intent = getIntent();
         currentUser = intent.getStringExtra("currentUser");
-        String url = "http://olongapogo.pythonanywhere.com/rides/create";
+        String url = "https://olongapogo.pythonanywhere.com/rides/create";
         btnMakeReqForm.setOnClickListener(v -> {
             String address = etAddressForm.getText().toString();
             String date = etDateForm.getText().toString();
