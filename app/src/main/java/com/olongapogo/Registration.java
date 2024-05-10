@@ -78,7 +78,7 @@ public class Registration extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(Registration.this, error.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registration.this, "Username Already Exists", Toast.LENGTH_SHORT).show();
                 }
             }) {
                 @Override
@@ -97,7 +97,7 @@ public class Registration extends AppCompatActivity {
     }
 
     public void goToUser(){
-        Intent intent = new Intent(this, Request.class);
+        Intent intent = new Intent(this, RequestActivity.class);
         intent.putExtra("currentUser", currentUser);
         startActivity(intent);
     }
