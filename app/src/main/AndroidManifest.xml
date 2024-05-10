@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,15 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OlongapoGo"
         tools:targetApi="31">
-
+        <activity
+            android:name=".custom_confirmbooking"
+            android:exported="false" />
+        <activity
+            android:name=".DriverPage"
+            android:exported="false" />
         <activity
             android:name=".RegisterDriver"
             android:exported="false" />
-
         <activity
             android:name=".Login"
             android:exported="false" />
-
         <activity
             android:name=".MainPage"
             android:exported="false" />
@@ -35,13 +39,7 @@
             android:name=".CustomDriver"
             android:exported="false" />
         <activity
-            android:name=".Driver"
-            android:exported="false" />
-        <activity
             android:name=".CustomOwner"
-            android:exported="false" />
-        <activity
-            android:name=".Owner"
             android:exported="false" />
         <activity
             android:name=".Search"

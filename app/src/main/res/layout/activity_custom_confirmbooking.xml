@@ -8,12 +8,12 @@
     android:orientation="vertical"
     android:padding="15dp"
     android:gravity="center"
-    tools:context=".CustomOwner">
+    tools:context=".custom_confirmbooking">
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="380dp"
-        android:layout_height="310dp"
+        android:layout_height="280dp"
         android:background="@color/cardview_light_background"
         android:layout_gravity="center">
 
@@ -35,18 +35,7 @@
                 android:paddingLeft="5dp"
                 android:paddingTop="5dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:padding="10dp"
-                    android:text="ID"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
 
-                    />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -60,6 +49,20 @@
                     android:textStyle="bold"
 
                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/et_white_left"
+                    android:gravity="center|left"
+                    android:padding="10dp"
+                    android:text="VEHICLE TYPE"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+
+                    />
+
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -68,11 +71,10 @@
                     android:background="@drawable/et_white_left"
                     android:gravity="center|left"
                     android:paddingLeft="5dp"
-                    android:text="DESTINATION"
+                    android:text="ARRIVAL DATE"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -80,18 +82,7 @@
                     android:background="@drawable/et_white_left"
                     android:gravity="center|left"
                     android:paddingLeft="5dp"
-                    android:text="ARRIVAL TIME"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="DRIVER"
+                    android:text="NUMBER OF PASSENGERS"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -102,10 +93,11 @@
                     android:background="@drawable/et_white_left"
                     android:gravity="center|left"
                     android:paddingLeft="5dp"
-                    android:text="STATUS"
+                    android:text="SPECIAL REQUEST"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
+
 
 
             </LinearLayout>
@@ -119,7 +111,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/tvIdOwner"
+                    android:id="@+id/tvIdAccept"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center|left"
@@ -131,7 +123,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/tvOwnerPassenger"
+                    android:id="@+id/tvVehicleType"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
 
@@ -142,7 +134,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvDestinationOwner"
+                    android:id="@+id/tvArrivalAccept"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center|left"
@@ -150,10 +142,10 @@
                     android:textStyle="bold"
                     android:background="@drawable/et_white_left"
                     android:textColor="@color/black"
-                     />
+                    />
 
                 <TextView
-                    android:id="@+id/tvArrivalOwner"
+                    android:id="@+id/tvPassengersAccept"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center|left"
@@ -165,7 +157,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/tvDriverOwner"
+                    android:id="@+id/tvRequestAccept"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center|left"
@@ -176,25 +168,16 @@
 
                     />
 
-                <TextView
-                    android:id="@+id/tvStatusOwner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
 
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
 
-                    <Button
-                        android:id="@+id/btnCompleteEdit"
-                        android:layout_width="110dp"
-                        android:layout_height="48dp"
-                        android:text="Edit"
-                        android:textSize="17dp"
-                        android:layout_marginLeft="50dp"
-                        android:backgroundTint="#373C39"/>
+                <Button
+                    android:id="@+id/btnAcceptBooking"
+                    android:layout_width="130dp"
+                    android:layout_height="48dp"
+                    android:text="ACCEPT"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="50dp"
+                    android:backgroundTint="#373C39"/>
 
 
 

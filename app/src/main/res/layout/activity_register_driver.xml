@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     android:orientation="vertical"
-    android:background="@drawable/bg_for_all"
+    android:background="@drawable/bg_for_plain"
     tools:context=".RegisterDriver">
 
     <ImageButton
@@ -26,9 +26,17 @@
         android:orientation="vertical"
         android:gravity="center|top"
         android:padding="10dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/etlogin"
         >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Driver's" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

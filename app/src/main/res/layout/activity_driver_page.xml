@@ -8,7 +8,7 @@
     android:orientation="vertical"
 
     android:background="@drawable/bg_for_plain"
-    tools:context=".RequestActivity">
+    tools:context=".DriverPage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,19 +25,7 @@
 
         </ImageButton>
 
-        <Button
-            android:id="@+id/btnRequest"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Search a Ride"
-            android:padding="10dp"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:backgroundTint="#0A2916">
 
-        </Button>
 
 
     </LinearLayout>
@@ -47,11 +35,11 @@
         android:layout_width="390dp"
         android:layout_height="650dp"
         android:layout_marginLeft="11dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="150dp"
         android:gravity="center">
 
         <ListView
-            android:id="@+id/listViewOwnerRides"
+            android:id="@+id/listViewDriverPage"
             android:layout_width="360dp"
             android:layout_height="590dp"
             android:layout_marginTop="10dp"
