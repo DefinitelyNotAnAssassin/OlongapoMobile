@@ -106,7 +106,13 @@ public class Search extends AppCompatActivity {
         currentUser = intent.getStringExtra("currentUser");
 
 
+        searchBtn = findViewById(R.id.btnSearch);
 
+        searchBtn.setOnClickListener(v -> {
+            Intent intent1 = new Intent(Search.this, DriverPage.class);
+            intent1.putExtra("currentUser", currentUser);
+            startActivity(intent1);
+        });
 
 
     }
