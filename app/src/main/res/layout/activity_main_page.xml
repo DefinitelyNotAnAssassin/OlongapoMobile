@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/logo_green"
+    android:background="@drawable/welcome0"
     android:gravity="center"
     tools:context=".MainPage"
     >
@@ -14,35 +14,42 @@
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="200dp"
-        android:background="@drawable/etlogin"
-        android:layout_marginTop="250dp"
+
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811">
 
         <Button
             android:id="@+id/btnSignUpMain"
-            android:layout_width="120dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:backgroundTint="#194053"
             android:padding="10dp"
-            android:textSize="17dp"
-            android:backgroundTint="#373C39"/>
+            android:text="Sign Up"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
             android:gravity="center"
-            android:layout_marginTop="40dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center|left"
                 android:text="Already have an account?"
+                android:textColor="#0B0909"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="#0B0909"
 
                 />
 
@@ -50,28 +57,20 @@
                 android:id="@+id/linkSignin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center|left"
                 android:layout_marginStart="15dp"
+                android:clickable="true"
+                android:gravity="center|left"
                 android:text="Sign in"
+                android:textColor="#252525"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="#252525"
-                android:clickable="true"
 
                 />
 
         </LinearLayout>
 
 
-
-
-
-
     </LinearLayout>
 
 
-
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

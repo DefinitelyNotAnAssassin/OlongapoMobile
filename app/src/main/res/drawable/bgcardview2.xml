@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:shape="rectangle"
     android:thickness="0dp"
     >
+
     <corners
-        android:radius="40dp"
-        ></corners>
+        android:radius="20dp"/>
 
-    <solid android:color="#C1D8B2">
 
-    </solid>
+    <solid android:color="#F6F8F6"/>
 
     <stroke
-        android:width="2dp"
-        android:color="#426842">
-
-    </stroke>
+        android:width="5dp"
+        android:color="#35B141"/>
 
 
 

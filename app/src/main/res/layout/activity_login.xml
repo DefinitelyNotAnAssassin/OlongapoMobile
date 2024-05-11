@@ -65,6 +65,7 @@
             android:text="Login"
             android:padding="10dp"
             android:textSize="20dp"
+            android:textColor="@color/white"
             android:backgroundTint="#194053"
             android:layout_marginBottom="10dp"/>
     </LinearLayout>

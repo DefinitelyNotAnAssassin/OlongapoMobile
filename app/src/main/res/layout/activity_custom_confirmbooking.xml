@@ -1,199 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="15dp"
     android:gravity="center"
     tools:context=".custom_confirmbooking">
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="280dp"
-        android:background="@color/cardview_light_background"
-        android:layout_gravity="center">
 
 
-        <LinearLayout
-            android:layout_width="370dp"
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top">
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/bgcardview"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            >
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="OWNER"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/upperleft"/>
+
+        <TextView
+            android:id="@+id/tvIdAccept"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="5dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="VEHICLE TYPE"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvVehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:paddingStart="5dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="ARRIVAL DATE"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvArrivalAccept"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="5dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="Total Passenger"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPassengersAccept"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="5dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lowerleft"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="SPECIAL REQUEST"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRequestAccept"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </TableRow>
 
 
-            <LinearLayout
-                android:layout_width="125dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnAcceptBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#194053"
+            android:text="ACCEPT"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
 
 
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="OWNER"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:padding="10dp"
-                    android:text="VEHICLE TYPE"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-
-                    />
-
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="ARRIVAL DATE"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="NUMBER OF PASSENGERS"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="SPECIAL REQUEST"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                >
-
-                <TextView
-                    android:id="@+id/tvIdAccept"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/et_white_left"
-                    android:textColor="@color/black"
-
-                    />
-
-                <TextView
-                    android:id="@+id/tvVehicleType"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvArrivalAccept"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/et_white_left"
-                    android:textColor="@color/black"
-                    />
-
-                <TextView
-                    android:id="@+id/tvPassengersAccept"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:background="@drawable/et_white_left"
-
-                    />
-
-                <TextView
-                    android:id="@+id/tvRequestAccept"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/et_white_left"
-                    android:textColor="@color/black"
-
-                    />
-
-
-
-                <Button
-                    android:id="@+id/btnAcceptBooking"
-                    android:layout_width="130dp"
-                    android:layout_height="48dp"
-                    android:text="ACCEPT"
-                    android:textSize="17dp"
-                    android:layout_marginLeft="50dp"
-                    android:backgroundTint="#373C39"/>
-
-
-
-
-            </LinearLayout>
-
-
-
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-</LinearLayout>
+</TableLayout>

@@ -1,216 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="50dp"
     android:gravity="center"
     tools:context=".CustomOwner">
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="310dp"
-        android:background="@color/cardview_light_background"
-        android:layout_gravity="center">
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
 
 
-        <LinearLayout
-            android:layout_width="370dp"
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/top">
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/bgcardview"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            >
+            android:background="@drawable/upperleft"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="ID"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvIdOwner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp"  />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="OWNER"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOwnerPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="DESTINATION"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDestinationOwner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="ARRIVAL TIME"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvArrivalOwner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="DRIVER"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDriverOwner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="STATUS"
+            android:textColor="@color/black"
+            android:background="@drawable/lowerleft"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatusOwner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </TableRow>
+
+</TableLayout>
 
 
-            <LinearLayout
-                android:layout_width="125dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:padding="10dp"
-                    android:text="ID"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="OWNER"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="DESTINATION"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="ARRIVAL TIME"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="DRIVER"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:paddingLeft="5dp"
-                    android:text="STATUS"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                >
-
-                <TextView
-                    android:id="@+id/tvIdOwner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/et_white_left"
-                    android:textColor="@color/black"
-
-                    />
-
-                <TextView
-                    android:id="@+id/tvOwnerPassenger"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvDestinationOwner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/et_white_left"
-                    android:textColor="@color/black"
-                     />
-
-                <TextView
-                    android:id="@+id/tvArrivalOwner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:background="@drawable/et_white_left"
-
-                    />
-
-                <TextView
-                    android:id="@+id/tvDriverOwner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center|left"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/et_white_left"
-                    android:textColor="@color/black"
-
-                    />
-
-                <TextView
-                    android:id="@+id/tvStatusOwner"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-
-                    android:background="@drawable/et_white_left"
-                    android:gravity="center|left"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/btnCompleteEdit"
-                        android:layout_width="110dp"
-                        android:layout_height="48dp"
-                        android:text="Edit"
-                        android:textSize="17dp"
-                        android:layout_marginLeft="50dp"
-                        android:backgroundTint="#373C39"/>
-
-
-
-
-            </LinearLayout>
-
-
-
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

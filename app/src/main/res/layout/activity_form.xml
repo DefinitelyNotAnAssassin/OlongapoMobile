@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_for_plain"
+    android:background="@drawable/backg"
     tools:context=".Form">
 
     <ImageButton
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
-        android:background="#058C1F"
+        android:background="#35B141"
         android:src="@drawable/arrow_back"></ImageButton>
 
 
@@ -117,7 +117,7 @@
                 <EditText
                     android:id="@+id/etDateForm"
                     android:layout_width="250dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:backgroundTint="@color/white"
                     android:background="@drawable/et_bg"
                     android:padding="7dp"
@@ -131,7 +131,7 @@
                 <EditText
                     android:id="@+id/etTimeForm"
                     android:layout_width="250dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/et_bg"
                     android:backgroundTint="@color/white"

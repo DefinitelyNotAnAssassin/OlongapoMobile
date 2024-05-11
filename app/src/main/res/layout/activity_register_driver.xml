@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,27 +7,33 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     android:orientation="vertical"
-    android:background="@drawable/bg_for_plain"
+    android:background="@drawable/backg"
     tools:context=".RegisterDriver">
 
     <ImageButton
         android:id="@+id/switchTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="#35B141"
         android:src="@drawable/arrow_back"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
-        android:background="#058C1F">
-    </ImageButton>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center|top"
-        android:padding="10dp"
-        android:layout_marginTop="150dp"
         android:background="@drawable/etlogin"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931"
         >
         <TextView
             android:layout_width="match_parent"
@@ -173,7 +179,9 @@
             android:text="Register"
             android:padding="10dp"
             android:textSize="20dp"
-            android:backgroundTint="#373C39"/>
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#194053"/>
 
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
