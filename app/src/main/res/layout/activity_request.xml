@@ -10,20 +10,6 @@
     tools:context=".RequestActivity">
 
 
-    <ImageButton
-        android:id="@+id/switchTo"
-        android:layout_width="35dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="10dp"
-        android:background="#35B141"
-        android:src="@drawable/arrow_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="52dp">
-
-    </ImageButton>
 
     <LinearLayout
         android:id="@+id/linearLayout2"

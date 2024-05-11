@@ -68,13 +68,14 @@ public class Registration extends AppCompatActivity {
                     // convert response to json object
 
                     try {
+                        System.out.println(response);
                         JSONObject jsonObject = new JSONObject(response);
                         String currentUser = jsonObject.getString("currentUser");
                         goToUser();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                }
+                }   
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {

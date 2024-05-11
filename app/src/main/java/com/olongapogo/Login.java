@@ -175,5 +175,10 @@ public class Login extends AppCompatActivity {
         i.putExtra("currentUser", currentUser);
         startActivity(i);
     }
+
+    public void goToRegister(View v){
+        Intent i = new Intent(this, Registration.class);
+        startActivity(i);
+    }
 }
 

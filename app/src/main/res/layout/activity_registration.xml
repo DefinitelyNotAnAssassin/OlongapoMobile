@@ -11,16 +11,6 @@
     tools:context=".Registration">
 
 
-    <ImageButton
-        android:id="@+id/switchTo"
-        android:layout_width="35dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:background="#35B141"
-        android:src="@drawable/arrow_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
     <LinearLayout
         android:layout_width="325dp"
