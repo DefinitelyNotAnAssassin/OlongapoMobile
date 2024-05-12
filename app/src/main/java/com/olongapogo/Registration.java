@@ -49,7 +49,7 @@ public class Registration extends AppCompatActivity {
         etUsernameRegister = findViewById(R.id.etUsernameRegister);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String url = "https://olongapogo.pythonanywhere.com/accounts/register";
+        String url = "http://192.168.1.4:8000/accounts/register";
 
         btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(v -> {
@@ -70,7 +70,7 @@ public class Registration extends AppCompatActivity {
                     try {
                         System.out.println(response);
                         JSONObject jsonObject = new JSONObject(response);
-                        String currentUser = jsonObject.getString("currentUser");
+                        currentUser = jsonObject.getString("currentUser");
                         goToUser();
                     } catch (JSONException e) {
                         e.printStackTrace();

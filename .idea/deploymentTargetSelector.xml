@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-05-10T18:02:19.460398200Z">
+        <DropdownSelection timestamp="2024-05-11T16:06:15.562524100Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Acer\.android\avd\offoo_API_24.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Winmri\.android\avd\plss_API.avd" />
             </handle>
           </Target>
         </DropdownSelection>

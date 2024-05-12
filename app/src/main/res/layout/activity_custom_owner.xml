@@ -14,13 +14,11 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
 
-
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/top">
-
+    
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

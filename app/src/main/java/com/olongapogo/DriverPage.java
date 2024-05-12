@@ -50,7 +50,7 @@ public class DriverPage extends AppCompatActivity {
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        String url = "https://olongapogo.pythonanywhere.com/rides/search";
+        String url = "http://192.168.1.4:8000/rides/search";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override

@@ -41,7 +41,7 @@ public class Search extends AppCompatActivity {
         });
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://olongapogo.pythonanywhere.com/rides/getRides";
+        String url = "http://192.168.1.4:8000/rides/getRides";
 
 
         StringRequest stringRequest = new StringRequest(com.android.volley.Request.Method.POST, url,

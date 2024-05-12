@@ -80,7 +80,7 @@ public class CustomDriverAdapter extends BaseAdapter {
 
                     RequestQueue queue = Volley.newRequestQueue(context);
 
-                    String url = "https://olongapogo.pythonanywhere.com/rides/updateRideStatus";
+                    String url = "http://192.168.1.4:8000/rides/updateRideStatus";
 
                     StringRequest stringRequest = new StringRequest(com.android.volley.Request.Method.POST, url,
                             response -> {

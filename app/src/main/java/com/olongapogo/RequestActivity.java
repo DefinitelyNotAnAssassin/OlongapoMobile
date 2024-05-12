@@ -41,10 +41,13 @@ public class RequestActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Intent intent = getIntent();
+        currentUser = intent.getStringExtra("currentUser");
+
 
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://olongapogo.pythonanywhere.com/rides/getRides";
+        String url = "http://192.168.1.4:8000/rides/getRides";
 
 
         StringRequest stringRequest = new StringRequest(com.android.volley.Request.Method.POST, url,
@@ -60,9 +63,22 @@ public class RequestActivity extends AppCompatActivity {
                             JSONObject ride = responseJSON.getJSONArray("user_rides").getJSONObject(i);
                             Map<String, String> rideMap = new HashMap<>();
 
+                            JSONObject owner = ride.getJSONObject("owner");
+
+                            // [{"id":2,"owner_id":4,"driver_id":1,"destination":"Olongapo","required_arrival_time":"2024-05-07T10:13:00Z","passenger_number_from_owner":4,"passenger_number_in_total":4,"ride_status":"complete","requested_vehicle_type":"Sedan","special_request":"Nothing","can_be_shared":false,"sharer_id_and_passenger_number_pair":null}]}
+                            //2024-05-09 17:46:49.241 13684-13684 AndroidRuntime          com.olongapogo                       D  Shutting down VM
+
                             rideMap.put("id", ride.getString("id"));
-                            rideMap.put("owner_id", ride.getString("owner__first_name") + " " + ride.getString("owner__last_name"));
-                            rideMap.put("driver_id", ride.getString("driver__first_name") + " " + ride.getString("driver__last_name"));
+                            rideMap.put("owner_id", owner.getString("first_name") + " " + owner.getString("last_name"));
+                            String driverFirstName = ride.optString("driver__first_name");
+                            String driverLastName = ride.optString("driver__last_name");
+
+                            String driverName = "No driver assigned";
+                            if (driverFirstName != null && !driverFirstName.isEmpty() && driverLastName != null && !driverLastName.isEmpty()) {
+                                driverName = driverFirstName + " " + driverLastName;
+                            }
+
+                            rideMap.put("driver_id", driverName);
                             rideMap.put("destination", ride.getString("destination"));
                             rideMap.put("required_arrival_time", ride.getString("required_arrival_time"));
                             rideMap.put("passenger_number_from_owner", ride.getString("passenger_number_from_owner"));
@@ -70,6 +86,7 @@ public class RequestActivity extends AppCompatActivity {
                             rideMap.put("ride_status", ride.getString("ride_status"));
                             rideMap.put("requested_vehicle_type", ride.getString("requested_vehicle_type"));
                             rideMap.put("special_request", ride.getString("special_request"));
+
                             rides.add(rideMap);
                         }
 
@@ -100,9 +117,6 @@ public class RequestActivity extends AppCompatActivity {
 
         System.out.println(rides);
 
-
-        Intent intent = getIntent();
-        currentUser = intent.getStringExtra("currentUser");
 
 
         searchBtn = findViewById(R.id.btnRequest);
