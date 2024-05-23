@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,8 +22,14 @@ import java.util.Map;
 
 public class Form extends AppCompatActivity {
     String currentUser;
+    String pickupAddress, destinationAddress;
+    String pickupLat, pickupLng, destinationLat, destinationLng;
     EditText etAddressForm, etDateForm, etTimeForm, etPassengerForm, etVehicleTypeForm, etNotesForm;
     Button btnMakeReqForm;
+    ImageButton mapBtn;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +52,29 @@ public class Form extends AppCompatActivity {
         etVehicleTypeForm = findViewById(R.id.etVehicleTypeForm);
         etNotesForm = findViewById(R.id.etNotesForm);
         btnMakeReqForm = findViewById(R.id.btnMakeReqForm);
+        mapBtn = findViewById(R.id.mapBtn);
+
+
+
         Intent intent = getIntent();
         currentUser = intent.getStringExtra("currentUser");
-        String url = "http://192.168.1.4:8000/rides/create";
+        pickupAddress = intent.getStringExtra("pickupAddress");
+        destinationAddress = intent.getStringExtra("destinationAddress");
+        pickupLat = intent.getStringExtra("pickupLat");
+        pickupLng = intent.getStringExtra("pickupLng");
+        destinationLat = intent.getStringExtra("destinationLat");
+        destinationLng = intent.getStringExtra("destinationLng");
+
+
+        // Initial Load Shall be Null
+        System.out.println(pickupLat);
+        System.out.println(pickupLng);
+        System.out.println(destinationLat);
+        System.out.println(destinationLng);
+
+        etAddressForm.setText(destinationAddress);
+        etNotesForm.setText(pickupAddress);
+        String url = "http://olongapogo.com/rides/create";
         btnMakeReqForm.setOnClickListener(v -> {
             String address = etAddressForm.getText().toString();
             String date = etDateForm.getText().toString();
@@ -80,6 +107,10 @@ public class Form extends AppCompatActivity {
                     params.put("vehicle_type", vehicleType);
                     params.put("special_request", notes);
                     params.put("currentUser", currentUser);
+                    params.put("pickup_latitude", pickupLat);
+                    params.put("pickup_longitude", pickupLng);
+                    params.put("destination_latitude", destinationLat);
+                    params.put("destination_longitude", destinationLng);
                     return params;
                 }
 
@@ -89,7 +120,14 @@ public class Form extends AppCompatActivity {
 
         });
 
+
+        mapBtn.setOnClickListener(v -> {
+            Intent intent1 = new Intent(Form.this, FormDestinationPickup.class);
+            intent1.putExtra("currentUser", currentUser);
+            startActivity(intent1);
+        });
     }
+
 
     public void goToUser(View v){
         Intent intent = new Intent(this, RequestActivity.class);

@@ -82,7 +82,7 @@ public class CustomConfirmBookingAdapter extends BaseAdapter {
 
         btnAcceptBooking.setOnClickListener(v -> {
             RequestQueue requestQueue = Volley.newRequestQueue(context);
-            String url = "http://192.168.1.4:8000/rides/acceptRide";
+            String url = "http://olongapogo.com/rides/acceptRide";
 
             // post a request to the url with the ride id and the currentUser
 

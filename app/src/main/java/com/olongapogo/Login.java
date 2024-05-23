@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://192.168.1.4:8000/accounts/login";
+                String url = "http://olongapogo.com/accounts/login";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         response -> {
@@ -78,70 +78,10 @@ public class Login extends AppCompatActivity {
                                     currentUser = responseJSON.getString("currentUser");
                                     if (responseJSON.getString("is_driver").equals("true")){
 
-                                        // iterate through the responseJSON rides and add them to the rides arraylist
-
-                                        for (int i = 0; i < responseJSON.getJSONArray("driver_rides").length(); i++) {
-                                            JSONObject ride = responseJSON.getJSONArray("driver_rides").getJSONObject(i);
-
-                                            Map<String, String> rideMap = new HashMap<>();
-                                            // [{"id":2,"owner_id":4,"driver_id":1,"destination":"Olongapo","required_arrival_time":"2024-05-07T10:13:00Z","passenger_number_from_owner":4,"passenger_number_in_total":4,"ride_status":"complete","requested_vehicle_type":"Sedan","special_request":"Nothing","can_be_shared":false,"sharer_id_and_passenger_number_pair":null}]}
-                                            //2024-05-09 17:46:49.241 13684-13684 AndroidRuntime          com.olongapogo                       D  Shutting down VM
-
-                                            rideMap.put("id", ride.getString("id"));
-                                            rideMap.put("owner_id", ride.getString("owner__first_name") + " " + ride.getString("owner__last_name"));
-                                            rideMap.put("driver_id", ride.getString("driver__first_name") + " " + ride.getString("driver__last_name"));
-                                            rideMap.put("destination", ride.getString("destination"));
-                                            rideMap.put("required_arrival_time", ride.getString("required_arrival_time"));
-                                            rideMap.put("passenger_number_from_owner", ride.getString("passenger_number_from_owner"));
-                                            rideMap.put("passenger_number_in_total", ride.getString("passenger_number_in_total"));
-                                            rideMap.put("ride_status", ride.getString("ride_status"));
-                                            rideMap.put("requested_vehicle_type", ride.getString("requested_vehicle_type"));
-                                            rideMap.put("special_request", ride.getString("special_request"));
-                                            rides.add(rideMap);
-                                        }
 
                                         goToDriver();
                                     }
                                     else{
-
-                                        //
-                                        // iterate through the responseJSON rides and add them to the rides arraylist
-                                        // the keys are 'owner__first_name', 'owner__last_name', 'owner__username', 'destination', 'required_arrival_time', 'passenger_number_from_owner', 'passenger_number_in_total', 'ride_status', 'requested_vehicle_type', 'special_request', 'can_be_shared', 'sharers__first_name', 'sharers__last_name',  'id', 'driver_id', 'driver__first_name', 'driver__last_name', 'driver__username')
-                                        //
-
-                                        for (int i = 0; i < responseJSON.getJSONArray("user_rides").length(); i++) {
-                                            JSONObject ride = responseJSON.getJSONArray("user_rides").getJSONObject(i);
-                                            // access the owner json inside the ride
-
-                                            JSONObject owner = ride.getJSONObject("owner");
-
-                                            Map<String, String> rideMap = new HashMap<>();
-                                            // [{"id":2,"owner_id":4,"driver_id":1,"destination":"Olongapo","required_arrival_time":"2024-05-07T10:13:00Z","passenger_number_from_owner":4,"passenger_number_in_total":4,"ride_status":"complete","requested_vehicle_type":"Sedan","special_request":"Nothing","can_be_shared":false,"sharer_id_and_passenger_number_pair":null}]}
-                                            //2024-05-09 17:46:49.241 13684-13684 AndroidRuntime          com.olongapogo                       D  Shutting down VM
-
-                                            rideMap.put("id", ride.getString("id"));
-                                            rideMap.put("owner_id", owner.getString("first_name") + " " + owner.getString("last_name"));
-                                            String driverFirstName = ride.optString("driver__first_name");
-                                            String driverLastName = ride.optString("driver__last_name");
-
-                                            String driverName = "No driver assigned";
-                                            if (driverFirstName != null && !driverFirstName.isEmpty() && driverLastName != null && !driverLastName.isEmpty()) {
-                                                driverName = driverFirstName + " " + driverLastName;
-                                            }
-
-                                            rideMap.put("driver_id", driverName);
-                                            rideMap.put("destination", ride.getString("destination"));
-                                            rideMap.put("required_arrival_time", ride.getString("required_arrival_time"));
-                                            rideMap.put("passenger_number_from_owner", ride.getString("passenger_number_from_owner"));
-                                            rideMap.put("passenger_number_in_total", ride.getString("passenger_number_in_total"));
-                                            rideMap.put("ride_status", ride.getString("ride_status"));
-                                            rideMap.put("requested_vehicle_type", ride.getString("requested_vehicle_type"));
-                                            rideMap.put("special_request", ride.getString("special_request"));
-                                            rides.add(rideMap);
-                                        }
-
-
-
 
                                         goToUser();
                                     }

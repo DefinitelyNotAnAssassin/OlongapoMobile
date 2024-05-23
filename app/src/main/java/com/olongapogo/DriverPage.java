@@ -50,7 +50,7 @@ public class DriverPage extends AppCompatActivity {
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        String url = "http://192.168.1.4:8000/rides/search";
+        String url = "http://olongapogo.com/rides/search";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -68,18 +68,23 @@ public class DriverPage extends AppCompatActivity {
 
                         rideMap.put("id", ride.getString("id"));
                         rideMap.put("owner_id", ride.getString("owner_id"));
-                         rideMap.put("destination", ride.getString("destination"));
+                        rideMap.put("destination", ride.getString("destination"));
                         rideMap.put("required_arrival_time", ride.getString("required_arrival_time"));
                         rideMap.put("passenger_number_from_owner", ride.getString("passenger_number_from_owner"));
                         rideMap.put("passenger_number_in_total", ride.getString("passenger_number_in_total"));
                         rideMap.put("ride_status", ride.getString("ride_status"));
                         rideMap.put("requested_vehicle_type", ride.getString("requested_vehicle_type"));
                         rideMap.put("special_request", ride.getString("special_request"));
+                        rideMap.put("pickup_longitude", ride.getString("pickup_longitude"));
+                        rideMap.put("pickup_latitude", ride.getString("pickup_latitude"));
+                        rideMap.put("destination_longitude", ride.getString("destination_longitude"));
+                        rideMap.put("destination_latitude", ride.getString("destination_latitude"));
                         rides.add(rideMap);
                     }
 
                     CustomConfirmBookingAdapter customDriverPageAdapter = new CustomConfirmBookingAdapter(DriverPage.this, rides, currentUser);
                     listViewDriverPage.setAdapter(customDriverPageAdapter);
+
 
 
                 } catch (JSONException e) {

@@ -10,7 +10,6 @@
     tools:context=".Form">
 
 
-
     <LinearLayout
         android:layout_width="390dp"
         android:layout_height="wrap_content"
@@ -60,6 +59,28 @@
                 android:textSize="18sp" />
 
         </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="PICKUP LOCATION"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNotesForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/et_bg"
+            android:backgroundTint="@color/white"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
 
         <TextView
@@ -177,26 +198,6 @@
             android:textColor="@color/black"
             android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center|left"
-            android:text="SPECIAL REQUEST"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etNotesForm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/et_bg"
-            android:backgroundTint="@color/white"
-            android:inputType="text"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnMakeReqForm"

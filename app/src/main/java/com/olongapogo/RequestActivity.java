@@ -47,7 +47,7 @@ public class RequestActivity extends AppCompatActivity {
 
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://192.168.1.4:8000/rides/getRides";
+        String url = "http://olongapogo.com/rides/getRides";
 
 
         StringRequest stringRequest = new StringRequest(com.android.volley.Request.Method.POST, url,
