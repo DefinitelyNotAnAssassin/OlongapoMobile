@@ -79,11 +79,13 @@ public class FormDestinationPickup extends FragmentActivity implements OnMapRead
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng olongapo = new LatLng(14.8292, 120.2827);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(olongapo, 15.0f));
 
         mMap.setOnMapClickListener(latLng -> {
             if (pickupMarker == null) {
                 pickupMarker = new MarkerOptions().position(latLng).title("Pickup Location");
-                selectingLocationText.setText("Select Destination Location");
+
                 mMap.addMarker(pickupMarker);
             } else if (destinationMarker == null) {
                 destinationMarker = new MarkerOptions().position(latLng).title("Destination Location");
@@ -92,7 +94,7 @@ public class FormDestinationPickup extends FragmentActivity implements OnMapRead
             } else {
                 mMap.clear();
                 pickupMarker = new MarkerOptions().position(latLng).title("Pickup Location");
-                selectingLocationText.setText("Select Pickup Location");
+
                 mMap.addMarker(pickupMarker);
                 destinationMarker = null;
             }
