@@ -153,6 +153,18 @@
         android:gravity="end">
 
         <Button
+            android:id="@+id/btnViewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#194053"
+            android:text="View Map"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginEnd="20dp"/>
+
+
+        <Button
             android:id="@+id/btnAcceptBooking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -160,7 +172,7 @@
             android:text="ACCEPT"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="17dp"
+            android:textSize="15sp"
             android:layout_marginEnd="20dp"/>
 
     </LinearLayout>

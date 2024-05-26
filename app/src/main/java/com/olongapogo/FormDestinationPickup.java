@@ -44,7 +44,7 @@ public class FormDestinationPickup extends FragmentActivity implements OnMapRead
             mapFragment.getMapAsync(this);
         });
         // Set the button click listener
-        selectingLocationText = findViewById(R.id.selectingLocationText);
+
 
         Intent i = getIntent();
         currentUser = i.getStringExtra("currentUser");
