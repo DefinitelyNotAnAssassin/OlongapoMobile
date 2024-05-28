@@ -63,6 +63,10 @@ public class Search extends AppCompatActivity {
                             rideMap.put("owner_id", ride.getString("owner_id"));
                             rideMap.put("driver_id", ride.getString("driver_id"));
                             rideMap.put("destination", ride.getString("destination"));
+                            rideMap.put("pickup_lat", ride.getString("pickup_latitude"));
+                            rideMap.put("pickup_long", ride.getString("pickup_longitude"));
+                            rideMap.put("destination_lat", ride.getString("destination_latitude"));
+                            rideMap.put("destination_long", ride.getString("destination_longitude"));
                             rideMap.put("required_arrival_time", ride.getString("required_arrival_time"));
                             rideMap.put("passenger_number_from_owner", ride.getString("passenger_number_from_owner"));
                             rideMap.put("passenger_number_in_total", ride.getString("passenger_number_in_total"));

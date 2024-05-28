@@ -69,6 +69,7 @@ public class CustomConfirmBookingAdapter extends BaseAdapter {
         TextView tvArrivalAccept = view.findViewById(R.id.tvArrivalAccept);
         TextView tvPassengersAccept = view.findViewById(R.id.tvPassengersAccept);
         TextView tvRequestAccept  = view.findViewById(R.id.tvRequestAccept);
+        Button btnViewMap = view.findViewById(R.id.btnViewMap);
         Button btnAcceptBooking = view.findViewById(R.id.btnAcceptBooking);
 
 
@@ -77,7 +78,18 @@ public class CustomConfirmBookingAdapter extends BaseAdapter {
         tvArrivalAccept.setText(currentRide.get("required_arrival_time"));
         tvPassengersAccept.setText(currentRide.get("passenger_number_from_owner"));
         tvRequestAccept.setText(currentRide.get("special_request"));
-
+        System.out.println(currentRide.get("pickup_lat"));
+        System.out.println(currentRide.get("pickup_long"));
+        System.out.println(currentRide.get("destination_lat"));
+        System.out.println(currentRide.get("destination_long"));
+        btnViewMap.setOnClickListener(v -> {
+            Intent intent = new Intent(context, DriverRideMap.class);
+            intent.putExtra("destination_lat", currentRide.get("destination_lat"));
+            intent.putExtra("destination_long", currentRide.get("destination_long"));
+            intent.putExtra("pickup_lat", currentRide.get("pickup_lat"));
+            intent.putExtra("pickup_long", currentRide.get("pickup_long"));
+            context.startActivity(intent);
+        });
 
 
         btnAcceptBooking.setOnClickListener(v -> {

@@ -11,4 +11,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_form_destination_pickup">FormDestinationPickup</string>
+    <string name="title_activity_driver_ride_map">DriverRideMap</string>
 </resources>

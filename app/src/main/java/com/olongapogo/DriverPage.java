@@ -75,10 +75,10 @@ public class DriverPage extends AppCompatActivity {
                         rideMap.put("ride_status", ride.getString("ride_status"));
                         rideMap.put("requested_vehicle_type", ride.getString("requested_vehicle_type"));
                         rideMap.put("special_request", ride.getString("special_request"));
-                        rideMap.put("pickup_longitude", ride.getString("pickup_longitude"));
-                        rideMap.put("pickup_latitude", ride.getString("pickup_latitude"));
-                        rideMap.put("destination_longitude", ride.getString("destination_longitude"));
-                        rideMap.put("destination_latitude", ride.getString("destination_latitude"));
+                        rideMap.put("pickup_long", ride.getString("pickup_longitude"));
+                        rideMap.put("pickup_lat", ride.getString("pickup_latitude"));
+                        rideMap.put("destination_long", ride.getString("destination_longitude"));
+                        rideMap.put("destination_lat", ride.getString("destination_latitude"));
                         rides.add(rideMap);
                     }
 
