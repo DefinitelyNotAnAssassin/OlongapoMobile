@@ -124,14 +124,15 @@
 
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/bottom">
 
         <TextView
             android:text="Pick Up Location"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
-            android:background="@drawable/lowerleft"
+            android:paddingVertical="20dp"
             android:gravity="center|left"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -140,13 +141,16 @@
 
         <TextView
             android:id="@+id/tvRequestAccept"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:gravity="center|left"
             android:textColor="@color/black"
             android:textSize="13sp"
             android:textStyle="bold"
             android:paddingStart="5dp"
+            android:paddingVertical="20dp"
+            android:text = "Olongapo, Philippines, Earth, Solar System, Milky Way Galaxy"
             />
     </TableRow>
 
