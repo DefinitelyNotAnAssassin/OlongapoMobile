@@ -28,7 +28,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Login extends AppCompatActivity {
-    // Hello Sherry
 
     EditText username;
     EditText password;

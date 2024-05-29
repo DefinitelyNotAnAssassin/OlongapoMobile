@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,8 +9,10 @@
     android:gravity="center"
     tools:context=".CustomDriver">
 
-
-
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
 
     <TableRow
         android:layout_width="match_parent"
@@ -18,12 +20,12 @@
         android:background="@drawable/top">
 
         <TextView
+            android:text="ID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/upperleft"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="ID"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -45,12 +47,12 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="OWNER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outline"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="OWNER"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -71,11 +73,11 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="DESTINATION"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="DESTINATION"
             android:background="@drawable/outline"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -97,12 +99,12 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="ARRIVAL TIME"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outline"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="ARRIVAL TIME"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -123,12 +125,12 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="DRIVER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outline"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="DRIVER"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -148,12 +150,12 @@
         android:background="@drawable/bottom">
 
         <TextView
+            android:text="STATUS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/lowerleft"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="STATUS"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -186,5 +188,5 @@
 
     </LinearLayout>
 
-
 </TableLayout>
+</androidx.cardview.widget.CardView>

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="15dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
     android:gravity="center"
+    app:cardCornerRadius="20dp"
     tools:context=".custom_confirmbooking">
 
-
-
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:padding="10dp">
 
     <TableRow
         android:layout_width="match_parent"
@@ -18,25 +21,25 @@
         android:background="@drawable/top">
 
         <TextView
+            android:text="OWNER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/upperleft"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="OWNER"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:background="@drawable/upperleft"/>
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tvIdAccept"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:paddingStart="5dp"
             android:gravity="center|left"
             android:textColor="@color/black"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingStart="5dp" />
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -44,12 +47,12 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="VEHICLE TYPE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outline"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="VEHICLE TYPE"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -58,12 +61,11 @@
             android:id="@+id/tvVehicleType"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-
-            android:paddingStart="5dp"
             android:gravity="center|left"
             android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:paddingStart="5dp" />
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -71,12 +73,12 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="ARRIVAL DATE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outline"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="ARRIVAL DATE"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -85,11 +87,11 @@
             android:id="@+id/tvArrivalAccept"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:paddingStart="5dp"
             android:gravity="center|left"
             android:textColor="@color/black"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingStart="5dp"/>
     </TableRow>
 
     <TableRow
@@ -98,12 +100,12 @@
         android:background="@drawable/outline">
 
         <TextView
+            android:text="Total Passenger"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/outline"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="Total Passenger"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -112,27 +114,28 @@
             android:id="@+id/tvPassengersAccept"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:paddingStart="5dp"
             android:gravity="center|left"
             android:textColor="@color/black"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingStart="5dp"/>
     </TableRow>
 
+
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:background="@drawable/bottom">
 
         <TextView
+            android:text="Pick Up Location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/lowerleft"
             android:gravity="center|left"
             android:padding="10dp"
-            android:text="SPECIAL REQUEST"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -140,17 +143,18 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center|left"
-            android:paddingStart="5dp"
             android:textColor="@color/black"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingStart="5dp"
+            />
     </TableRow>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end">
+        android:gravity="end"
+        android:layout_marginTop="10dp">
 
         <Button
             android:id="@+id/btnViewMap"
@@ -162,7 +166,6 @@
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginEnd="20dp"/>
-
 
         <Button
             android:id="@+id/btnAcceptBooking"
@@ -177,5 +180,5 @@
 
     </LinearLayout>
 
-
 </TableLayout>
+</androidx.cardview.widget.CardView>
